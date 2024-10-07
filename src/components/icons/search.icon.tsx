@@ -1,4 +1,4 @@
-import React, { SVGAttributes } from "react";
+import { SVGAttributes } from "react";
 
 export const SearchSVG = (props: SVGAttributes<SVGElement>) => {
   return (

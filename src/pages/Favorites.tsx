@@ -14,7 +14,7 @@ export default function Favorites() {
   };
 
   if (favorites.length === 0) {
-    return <h1>No hay pokemones favoritos</h1>;
+    return <h1 className="mx-auto">No hay pokemones favoritos</h1>;
   }
 
   return (

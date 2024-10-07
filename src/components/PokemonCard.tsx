@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import { memo, useCallback } from 'react';
 import { FavoriteSVG } from "./icons/favorite.icon";
 import { SimplePokemon } from "@/hooks/useGetSimplePokemonData";
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
@@ -9,7 +9,7 @@ interface PokemonCardProps {
     pokemon: SimplePokemon;
 }
 
-export const PokemonCard = React.memo(({ pokemon }: PokemonCardProps) => {
+export const PokemonCard = memo(({ pokemon }: PokemonCardProps) => {
 
     const dispatch = useAppDispatch();
     const favorites = useAppSelector((state) => state.favorites);

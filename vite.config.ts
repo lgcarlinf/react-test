@@ -9,6 +9,18 @@ export default defineConfig({
     TanStackRouterVite(),
     react()
   ],
+  build:{
+    rollupOptions:{
+      output:{
+        manualChunks:{
+          'react': ['react', 'react-dom'],
+          'tanstack-router': ['@tanstack/react-router'],
+          'axios': ['axios'],
+          'redux': ['react-redux','@reduxjs/toolkit'],
+        },
+      },
+    }
+  },
   base: "./",
   resolve: {
     alias: {
